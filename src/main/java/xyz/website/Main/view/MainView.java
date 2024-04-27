@@ -57,7 +57,7 @@ public class MainView extends VerticalLayout {
                 binder.readBean(new Person());
                 refreshGrid();
             } catch (ValidationException e) {
-                // e
+                //
             }
         });
 
