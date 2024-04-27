@@ -4,7 +4,7 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
-import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
@@ -14,7 +14,6 @@ import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
-import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import xyz.website.Main.human.Person;
 import xyz.website.Main.human.PersonReponsitory;
@@ -45,11 +44,7 @@ public class MainView extends VerticalLayout {
                 .set("color", titleColor)
                 .set("margin-bottom", marginBottom);
 
-        HorizontalLayout layout = new HorizontalLayout(title);
-        layout.setDefaultVerticalComponentAlignment(Alignment.CENTER);
-        layout.setWidthFull();
-
-        return layout;
+        return new HorizontalLayout(title);
     }
 
     private Component getForm() {
